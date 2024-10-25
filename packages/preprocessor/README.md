@@ -4,9 +4,9 @@ Allows for one or many style preprocessors to be used for a given addon or app.
 
 ## Compatibility
 
-- Ember.js v4.0 or above
-- Ember CLI v4.0 or above
-- Node.js v16 or above
+- Ember.js v4.12 or above
+- Ember CLI v4.12 or above
+- Node.js v18 or above
 
 ## Installation
 

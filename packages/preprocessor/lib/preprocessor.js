@@ -32,7 +32,7 @@ module.exports = class Preprocessors {
           node,
           outFile,
           inFile: path.join(inputPath, project),
-        })
+        }),
       );
     }
 
@@ -59,7 +59,7 @@ module.exports = class Preprocessors {
   ensureFile(fileIn, node) {
     const newFile = witeFile(
       fileIn,
-      '/* Empty File. If know how to conditionaly run broccoli plugins, please reach out. Thanks. */'
+      '/* Empty File. If know how to conditionaly run broccoli plugins, please reach out. Thanks. */',
     );
 
     return merge([newFile, node], {
