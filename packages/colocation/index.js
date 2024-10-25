@@ -58,7 +58,7 @@ module.exports = {
       new MoveColocatedStyles({
         addonRealDir,
         ...options,
-      })
+      }),
     );
   },
 
