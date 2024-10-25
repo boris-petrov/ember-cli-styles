@@ -6,7 +6,7 @@ export function registerStyleFactories(owner, styleNamespaceFileManifest) {
       {
         instantiate: false,
         singleton: true,
-      }
+      },
     );
   });
 }

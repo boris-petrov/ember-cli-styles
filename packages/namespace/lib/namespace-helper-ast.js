@@ -30,7 +30,7 @@ function addNamespaceArguments(node, moduleName, builders) {
 
   const allArguments = getArguments(moduleName);
   const neededArguments = allArguments.filter(
-    (argument) => !node.hash.pairs.find((pair) => pair.key === argument.param)
+    (argument) => !node.hash.pairs.find((pair) => pair.key === argument.param),
   );
 
   node.hash.pairs.push(...neededArguments.map(addArguments(builders)));

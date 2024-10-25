@@ -4,7 +4,7 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const preprocessors = require('ember-cli-styles-preprocessor/lib/preprocessors');
 
 module.exports = function (defaults) {
-  let app = new EmberAddon(defaults, {
+  const app = new EmberAddon(defaults, {
     // Add options here
     emberCliStylesOptions: {
       preprocessors,
