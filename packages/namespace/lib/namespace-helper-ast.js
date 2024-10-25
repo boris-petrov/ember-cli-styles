@@ -26,7 +26,7 @@ function addArguments(builders) {
 }
 
 function addNamespaceArguments(node, moduleName, builders) {
-  if (node.path.original !== 'style-namespace') return;
+  if (node.path.hasOwnProperty('value') || node.path.original !== 'style-namespace') return;
 
   const allArguments = getArguments(moduleName);
   const neededArguments = allArguments.filter(
