@@ -27,7 +27,7 @@ module.exports = {
 
     const options = this._options(app);
     const preprocessors = Object.assign({}, options.preprocessors);
-    registry.add('css', new Preprocessor(preprocessors));
+    registry.add('css', new Preprocessor(preprocessors, options.outputPaths));
   },
 
   name: require('./package').name,

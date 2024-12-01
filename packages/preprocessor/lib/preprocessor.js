@@ -7,8 +7,9 @@ const merge = require('broccoli-merge-trees');
 const witeFile = require('broccoli-file-creator');
 
 module.exports = class Preprocessors {
-  constructor(preprocessors) {
+  constructor(preprocessors, outputPaths) {
     this.preprocessors = preprocessors;
+    this.outputPaths = outputPaths;
     this.ext = this.extensions;
   }
 
@@ -26,7 +27,8 @@ module.exports = class Preprocessors {
   toTree(node, inputPath, outputPath, options) {
     const styles = [];
 
-    for (const [project, outFile] of Object.entries(options.outputPaths)) {
+    // the `??` is for `ember-cli` 5 compatibility
+    for (const [project, outFile] of Object.entries(this.outputPaths ?? options.outputPaths)) {
       styles.push(
         this.preprocess({
           node,
